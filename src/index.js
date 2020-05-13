@@ -68,14 +68,13 @@ function displayWeather(response) {
   let pressure = response.data.main.pressure;
   document.querySelector("#pressure").innerHTML = `${pressure} hPa`;
 
-  let sunrise = formatSunriseTime(respone.data.sys.sunrise * 1000);
+  let sunrise = formatSunriseTime(response.data.sys.sunrise * 1000);
   document.querySelector("#sunrise").innerHTML = `${sunrise}`;
 
-  let icon = document.querySelector("#weathericontoday");
-  icon.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  let icon = (document.getElementById(
+    "#weathericontoday"
+  ).src = `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  document.querySelector("#weathericontoday").innerHTML = icon;
 
   icon.setAttribute("alt", response.data.weather[0].description);
 }

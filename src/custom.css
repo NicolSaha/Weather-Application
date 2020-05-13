@@ -161,6 +161,7 @@ body {
 #weather-illustration {
   display: relative;
   top: +80px;
+  width: 100%;
 }
 
 #extra-info {
