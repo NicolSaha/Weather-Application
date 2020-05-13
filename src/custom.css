@@ -80,7 +80,7 @@ body {
   background-color: transparent;
   color: whitesmoke;
   font-family: "Muli", sans-serif;
-  max-width: 600px;
+  width: 100%;
 }
 
 .container-main {
@@ -233,4 +233,18 @@ em {
 
 .active:hover {
   text-decoration: none;
+}
+
+/* Media Queries: Tablet Landscape */
+@media screen and (max-width: 1060px) {
+  .container-main {
+    width: 67%;
+  }
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+  .container-main {
+    width: 100%;
+  }
 }
