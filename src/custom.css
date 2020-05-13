@@ -81,8 +81,6 @@ body {
   color: whitesmoke;
   font-family: "Muli", sans-serif;
   width: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 .container-main {
@@ -95,10 +93,6 @@ body {
   padding: 25px;
   border: 1px solid rgb(32, 32, 33, 0.6);
   box-shadow: 0px 0px 10px 5px rgb(65, 98, 127, 0.4);
-}
-
-.container-header {
-  margin-top: 10px;
 }
 
 .container-display-content {
@@ -117,7 +111,7 @@ body {
   background-color: rgb(15, 40, 70, 0.4);
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 10px 10px 5px 2px rgb (47, 77, 107, 0.4);
+  box-shadow: 0px 0px 10px 5px rgb(65, 98, 127, 0.2);
 }
 
 .container-forecast {
@@ -129,7 +123,7 @@ body {
   background-color: rgb(15, 40, 70, 0.4);
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 10px 10px 5px 2px rgb (47, 77, 107, 0.4);
+  box-shadow: 0px 0px 10px 5px rgb(65, 98, 127, 0.2);
   list-style: none;
 }
 
@@ -151,7 +145,7 @@ body {
 .display-content-main {
   background-color: rgb(15, 40, 70, 0.5);
   border-radius: 15px 25px 15px 15px;
-  box-shadow: 10px 10px 5px 2px rgb (47, 77, 107, 0.8);
+  box-shadow: 0px 0px 10px 5px rgb(65, 98, 127, 0.1);
   padding: 20px;
 }
 
