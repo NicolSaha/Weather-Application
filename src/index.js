@@ -71,10 +71,8 @@ function displayWeather(response) {
   let sunrise = formatSunriseTime(response.data.sys.sunrise * 1000);
   document.querySelector("#sunrise").innerHTML = `${sunrise}`;
 
-  let icon = (document.getElementById(
-    "#weathericontoday"
-  ).src = `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  document.querySelector("#weathericontoday").innerHTML = icon;
+  let icon = document.querySelector("#weathericontoday img");
+  icon.src = `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
 
   icon.setAttribute("alt", response.data.weather[0].description);
 }
@@ -92,7 +90,7 @@ function displayForecast(response) {
         <div class="col-2">
             <strong>${formatHours(forecast.dt * 1000)}</strong> <br />
             <span class="weathericon">
-                <img align="middle" src="http://openweathermap.org/img/wn/${
+                <img align="middle" src="https://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
                 }@2x.png" alt="" />
             </span>
