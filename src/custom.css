@@ -81,6 +81,8 @@ body {
   color: whitesmoke;
   font-family: "Muli", sans-serif;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .container-main {
