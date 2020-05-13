@@ -1,0 +1,175 @@
+/* Button */
+
+#searchbutton {
+  background-color: rgb(65, 98, 127);
+  border-color: rgb(65, 98, 127, 0.7);
+  border: 2px solid;
+  border-radius: 15px;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  transition: all 1.3s ease-out;
+  color: whitesmoke;
+}
+
+#searchbutton:hover {
+  color: rgb(65, 98, 127);
+  background-color: whitesmoke;
+  border-color: rgb(65, 98, 127);
+  border-radius: 10px;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.btn:focus {
+  box-shadow: none !important;
+}
+
+.searchbutton:focus {
+  outline: none !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.searchbutton.disabled,
+.searchbutton:disabled {
+  color: transparent;
+  background-color: transparent;
+}
+
+/* Current location*/
+
+#currentlocation {
+  width: 30%;
+  margin: 25px;
+  display: inline-block;
+  text-align: right;
+  transition: all 1.3s ease-out;
+}
+
+#currentlocation:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+/* Search bar */
+
+.form {
+  display: inline-flex;
+  float: right;
+}
+
+#search-city-input {
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid rgb(32, 32, 33, 0.6);
+  margin-top: 15px;
+}
+
+#chosencity {
+  text-transform: uppercase;
+}
+
+/* Content general */
+
+body {
+  background-color: transparent;
+  color: whitesmoke;
+  font-family: "Muli", sans-serif;
+}
+
+.container {
+  background-image: linear-gradient(to bottom, #09203f 0%, #537895 100%);
+  display: block;
+  margin: 50px;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid rgb(32, 32, 33, 0.6);
+}
+
+.containerheader {
+  margin-top: 10px;
+}
+
+.containercontent {
+  margin: 0px;
+  padding: 25px;
+  display: block;
+  text-align: right;
+  margin: 0 auto;
+}
+
+.containerextra {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  background-color: rgb(15, 40, 70, 0.4);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px 2px rgb (47, 77, 107, 0.4);
+}
+
+.containerforecast {
+  margin: 25px 0px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  background-color: rgb(15, 40, 70, 0.4);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px 2px rgb (47, 77, 107, 0.4);
+  list-style: none;
+}
+
+/* Content specific */
+
+.mainword {
+  font-weight: bolder;
+}
+#extrainfo {
+  font-weight: bolder;
+  font-size: small;
+  display: flex;
+  flex-direction: row;
+}
+
+#extrainfovalues {
+  font-weight: lighter;
+}
+
+#temperature-description {
+  font-weight: lighter;
+  font-style: italic;
+  font-size: medium;
+  text-align: right;
+}
+
+#date {
+  font-style: italic;
+  font-size: smaller;
+}
+
+em {
+  font-size: small;
+}
+
+.footer {
+  color: whitesmoke;
+  display: block;
+  text-align: center;
+  margin: 0, auto;
+  padding-top: 15px;
+}
+
+.col-2 {
+  padding: 10px;
+}
+.col-2:hover {
+  background-color: rgb(15, 40, 70, 0.4);
+  border-radius: 15px;
+}
