@@ -19,7 +19,9 @@
   </head>
 
   <body>
+    <!-- main container -->
     <div class="container-main">
+      <!-- search engine -->
       <div class="container-header">
         <div class="row">
           <div class="col-3">
@@ -39,12 +41,14 @@
                 autofocus="on"
               />
 
+              <!-- current location button -->
               <input id="searchbutton" type="submit" value="Find Out Now" />
             </form>
           </div>
         </div>
       </div>
 
+      <!--city, date, weather -->
       <div class="container-display-content">
         <div class="row">
           <div class="col-6">
@@ -67,61 +71,63 @@
                   >| <a href="#" id="fahrenheit-link"> °F </a></span
                 >
               </li>
+
+              <!-- weather icon of the day -->
               <li id="weathericontoday">
                 <img src="" alt="icon" />
               </li>
             </ul>
           </div>
 
+          <!-- illustration -->
           <div id="weather-illustration" class="col-6 illustration">
-            <img
-              src="images/sunnybackground.svg"
-              alt="illustration"
-              width="100%"
-            />
+            <img src="images/background.svg" alt="illustration" width="100%" />
           </div>
         </div>
       </div>
 
+      <!-- extra info -->
       <div class="container-extra">
         <div id="extra-info" class="row">
           <div class="col-2">
-            <strong>Feels like</strong>
+            <u>Feels like</u>
             <br />
-            <span id="feels-like"> 18°C</span>
+            <span id="feels-like"></span>
           </div>
           <div class="col-2">
-            <strong>Humidity</strong>
+            <u>Humidity</u>
             <br />
-            <span id="humidity"> 60%</span>
+            <span id="humidity"></span>
           </div>
           <div class="col-2">
-            <strong>Wind</strong>
+            <u>Wind</u>
             <br />
-            <span id="wind">29 km/h</span>
+            <span id="wind"></span>
           </div>
           <div class="col-2">
-            <strong>Visibility</strong>
+            <u>Visibility</u>
             <br />
-            <span id="visibility"> 50 km</span>
+            <span id="visibility"></span>
           </div>
           <div class="col-2">
-            <strong>Pressure</strong>
+            <u>Pressure</u>
             <br />
-            <span id="pressure"> 1015 hPa</span>
+            <span id="pressure"></span>
           </div>
           <div class="col-2">
-            <strong>Sunrise</strong>
+            <u>Sunrise</u>
             <br />
-            <span id="sunrise">6</span>
+            <span id="sunrise"></span>
           </div>
         </div>
       </div>
 
+      <!-- forecast -->
       <div class="container-forecast">
         <div id="forecast" class="row weather-forecast"></div>
       </div>
 
+      <!-- footer -->
       <div class="footer">
         <p>
           <a

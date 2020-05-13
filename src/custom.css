@@ -1,3 +1,25 @@
+/* Current Location */
+
+#currentlocation {
+  width: 30%;
+  margin: 25px;
+  display: inline-block;
+  text-align: right;
+  transition: all 1.3s ease-out;
+}
+
+#currentlocation:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+/* Search bar */
+
+.form {
+  display: inline-flex;
+  float: right;
+}
+
 /* Search Button */
 
 #searchbutton {
@@ -38,42 +60,6 @@
   background-color: transparent;
 }
 
-/* Current Location */
-
-#currentlocation {
-  width: 30%;
-  margin: 25px;
-  display: inline-block;
-  text-align: right;
-  transition: all 1.3s ease-out;
-}
-
-#currentlocation:hover {
-  cursor: pointer;
-  transform: scale(1.2);
-}
-
-/* Search bar */
-
-.form {
-  display: inline-flex;
-  float: right;
-}
-
-#search-city-input {
-  border-radius: 10px;
-  padding: 10px;
-  border: 1px solid rgb(32, 32, 33, 0.6);
-  margin-top: 15px;
-}
-
-#chosencity {
-  text-transform: uppercase;
-  font-size: 25px;
-  font-weight: bolder;
-  font-size: xx-large;
-}
-
 /* Display Content General */
 
 body {
@@ -98,7 +84,7 @@ body {
 .container-display-content {
   padding: 25px 25px 0px 0px;
   display: block;
-  text-align: right;
+  text-align: center;
   margin: 0 auto;
 }
 
@@ -113,7 +99,6 @@ body {
 }
 
 .container-forecast {
-  margin: 25px 0px;
   display: block;
   text-align: center;
   margin: 0 auto;
@@ -127,8 +112,24 @@ body {
 
 /* Display Content Specific */
 
+#search-city-input {
+  border-radius: 10px;
+  border: 1px solid rgb(32, 32, 33, 0.6);
+  padding: 10px;
+  margin-top: 15px;
+}
+
+#chosencity {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bolder;
+  font-size: xx-large;
+  padding: 15px 0px 5px 10px;
+}
+
 #forecast {
   font-family: "Muli", sans-serif;
+  font-weight: bolder;
 }
 
 .weathericon {
@@ -168,7 +169,7 @@ body {
 #temperature-description {
   font-weight: lighter;
   font-size: x-large;
-  text-align: right;
+  text-align: center;
   text-transform: capitalize;
 }
 
@@ -196,10 +197,6 @@ body {
   text-align: right;
   position: relative;
   top: -10px;
-}
-
-em {
-  font-size: small;
 }
 
 .footer {

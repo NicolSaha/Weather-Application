@@ -30,7 +30,7 @@ let month = months[now.getMonth()];
 
 currentDate.innerHTML = `${day}, ${month} ${date}, ${year}, ${hours}:${minutes} `;
 
-// Info and Extra
+// Current Temp Info and Extra
 
 function formatSunrise(timestamp) {
   let date = new Date(timestamp);
@@ -69,7 +69,7 @@ function displayWeather(response) {
   document.querySelector("#pressure").innerHTML = `${pressure} hPa`;
 
   let sunrise = formatSunriseTime(response.data.sys.sunrise * 1000);
-  document.querySelector("#sunrise").innerHTML = `${sunrise}`;
+  document.querySelector("#sunrise").innerHTML = `${sunrise}h`;
 
   let icon = document.querySelector("#weathericontoday img");
   icon.src = `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
