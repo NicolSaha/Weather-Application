@@ -96,8 +96,7 @@ body {
 }
 
 .container-display-content {
-  margin: 0px;
-  padding: 25px;
+  padding: 25px 25px 0px 0px;
   display: block;
   text-align: right;
   margin: 0 auto;
@@ -107,7 +106,6 @@ body {
   margin: 0 auto;
   display: block;
   text-align: center;
-  margin-top: 10px;
   background-color: rgb(15, 40, 70, 0.4);
   padding: 20px;
   border-radius: 20px;
