@@ -32,14 +32,21 @@ currentDate.innerHTML = `${day}, ${month} ${date}, ${year}, ${hours}:${minutes} 
 
 // Info and Extra
 
+function formatSunrise(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  return `${hours}:${minutes}`;
+}
+
 function showWeather(response) {
   console.log(response.data);
 
   let city = response.data.name;
   document.querySelector("#chosencity").innerHTML = city;
-  document.querySelector("#current-temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+
+  let currentTemperature = Math.round(response.data.main.temp);
+  document.querySelector("#current-temperature").innerHTML = currentTemperature;
 
   let description = response.data.weather[0].description;
   document.querySelector("#temperature-description").innerHTML = description;
@@ -59,8 +66,16 @@ function showWeather(response) {
   let pressure = response.data.main.pressure;
   document.querySelector("#pressure").innerHTML = `${pressure} hPa`;
 
-  let sunrise = response.data.sys.sunrise;
+  let sunrise = formatSunrise(respone.data.sys.sunrise * 1000);
   document.querySelector("#sunrise").innerHTML = `${sunrise}`;
+
+  let icon = document.querySelector("#weathericontoday");
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+
+  icon.setAttribute("alt", response.data.weather[0].description);
 }
 
 // Search Engine
@@ -105,9 +120,12 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(handleLocation);
 }
 
-//
+// Form Handling
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 let findLocation = document.querySelector("#currentlocation");
 findLocation.addEventListener("click", getCurrentLocation);
+
+// Initial Search
+searchCity("Porto");
