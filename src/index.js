@@ -45,7 +45,9 @@ function showWeather(response) {
   let city = response.data.name;
   document.querySelector("#chosencity").innerHTML = city;
 
-  let currentTemperature = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
+
+  let currentTemperature = Math.round(celsiusTemperature);
   document.querySelector("#current-temperature").innerHTML = currentTemperature;
 
   let description = response.data.weather[0].description;
@@ -126,6 +128,39 @@ form.addEventListener("submit", handleSubmit);
 
 let findLocation = document.querySelector("#currentlocation");
 findLocation.addEventListener("click", getCurrentLocation);
+
+// Convert Fahrenheit and Celsius
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let currentTemperature = document.querySelector("#current-temperature");
+
+  // Remove active class celcius add to fahrenheit
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+
+  // Add active class celcius remove to fahrenheit
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+
+  let currentTemperature = document.querySelector("#current-temperature");
+  currentTemperature.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 // Initial Search
 searchCity("Porto");
