@@ -133,6 +133,19 @@ body {
 
 /* Display Content Specific */
 
+#forecast {
+  font-family: "Muli", sans-serif;
+}
+
+.weathericon {
+  position: relative;
+  left: -14px;
+}
+
+#mintemp {
+  font-size: x-small;
+}
+
 .display-content-main {
   background-color: rgb(15, 40, 70, 0.5);
   border-radius: 15px 25px 15px 15px;
@@ -149,8 +162,8 @@ body {
 
 #weather-illustration {
   position: relative;
-  top: +65px;
-  right: -20px;
+  top: +75px;
+  right: -30px;
 }
 
 #extra-info {

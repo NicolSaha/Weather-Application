@@ -93,14 +93,14 @@ function displayForecast(response) {
         <div class="col-2">
             <strong>${formatHours(forecast.dt * 1000)}</strong> <br />
             <span class="weathericon">
-                <img src="http://openweathermap.org/img/wn/${
+                <img align="middle" src="http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
                 }@2x.png" alt="" />
             </span>
             <br />
             <span> ${Math.round(forecast.main.temp_max)}°</span> |
-            <span>
-                <em> ${Math.round(forecast.main.temp_min)}°</em>
+            <span id="mintemp" >
+                 ${Math.round(forecast.main.temp_min)}°
             </span>
             <br />
         </div>
