@@ -1,4 +1,4 @@
-/* Button */
+/* Search Button */
 
 #searchbutton {
   background-color: rgb(65, 98, 127);
@@ -71,7 +71,7 @@
   text-transform: uppercase;
 }
 
-/* Content general */
+/* Display Content General */
 
 body {
   background-color: transparent;
@@ -79,7 +79,7 @@ body {
   font-family: "Muli", sans-serif;
 }
 
-.container {
+.container-main {
   background-image: linear-gradient(to bottom, #09203f 0%, #537895 100%);
   display: block;
   margin: 50px;
@@ -90,11 +90,11 @@ body {
   border: 1px solid rgb(32, 32, 33, 0.6);
 }
 
-.containerheader {
+.container-header {
   margin-top: 10px;
 }
 
-.containercontent {
+.container-display-content {
   margin: 0px;
   padding: 25px;
   display: block;
@@ -102,7 +102,7 @@ body {
   margin: 0 auto;
 }
 
-.containerextra {
+.container-extra {
   margin: 0 auto;
   display: block;
   text-align: center;
@@ -113,7 +113,7 @@ body {
   box-shadow: 10px 10px 5px 2px rgb (47, 77, 107, 0.4);
 }
 
-.containerforecast {
+.container-forecast {
   margin: 25px 0px;
   display: block;
   text-align: center;
@@ -126,20 +126,13 @@ body {
   list-style: none;
 }
 
-/* Content specific */
+/* Display Content Specific */
 
-.mainword {
-  font-weight: bolder;
-}
-#extrainfo {
+#extra-info {
   font-weight: bolder;
   font-size: small;
   display: flex;
   flex-direction: row;
-}
-
-#extrainfovalues {
-  font-weight: lighter;
 }
 
 #temperature-description {

@@ -1,140 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="src/custom.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-</head>
+  </head>
 
-<body>
-    <div class="container">
+  <body>
+    <div class="container-main">
+      <div class="container-header">
+        <div class="row">
+          <div class="col-3">
+            <img
+              id="currentlocation"
+              src="images/location.svg"
+              alt="currentlocation"
+            />
+          </div>
 
-        <div class="containerheader">
-            <div class="row">
+          <div class="col-9">
+            <form id="search-form">
+              <input
+                id="search-city-input"
+                type="text"
+                placeholder="Type Your City Here"
+                autocomplete="off"
+                autofocus="on"
+              />
 
-                <div class="col-3">
-                    <img id="currentlocation" src="images/location.svg" alt="currentlocation" />
-                </div>
-
-
-                <div class="col-9">
-
-                    <form id="search-form">
-
-                        <input id="search-city-input" type="text" placeholder="Type Your City Here" autocomplete="off"
-                            autofocus="on" />
-
-                        <input id="searchbutton" type="submit" value="Find Out Now" />
-
-                    </form>
-
-                </div>
-            </div>
+              <input id="searchbutton" type="submit" value="Find Out Now" />
+            </form>
+          </div>
         </div>
+      </div>
 
-        <div class="containercontent">
-            <div class="row">
-                <div class="col-6">
+      <div class="container-display-content">
+        <div class="row">
+          <div class="col-6">
+            <ul>
+              <li id="chosencity">Choose City</li>
+              <li id="current-date">Thursday, May 7th, 14:30</li>
 
+              <br />
 
-                    <h1 id="chosencity"> Choose City</h1>
-                    <h3 id="current-date"> Thursday, May 7th, 14:30 </h2>
+              <li id="temperature-description">Sunny</li>
+              <li>
+                <span class="temperature" id="current-temperature">
+                  <strong> 16</strong></span
+                >
+                <span class="units">
+                  <a href="#" id="celsius-link"> °C </a> |
+                  <a href="#" id="fahrenheit-link">F </a></span
+                >
+              </li>
+            </ul>
+          </div>
 
-                        <br />
-
-                        <h2 id="temperature-description">Sunny</h2>
-                        <h1> <span class="temperature" id="current-temperature"> <strong> 16</strong></span>
-                            <span class="units"> <a href="#" id="celsius-link"> °C </a> |
-                                <a href="#" id="fahrenheit-link">F </a></span> </h1>
-                </div>
-
-                <div id="weather-illustration" class="col-6"><img src="images/sunnybackground.svg" alt="sunny"
-                        width="100%">
-                </div>
-
-            </div>
+          <div id="weather-illustration" class="col-6">
+            <img src="images/sunnybackground.svg" alt="sunny" width="100%" />
+          </div>
         </div>
+      </div>
 
-        <div class="containerextra">
-
-            <div id="extrainfo" class="row">
-                <div class="col-2"><strong>Feels like</strong>
-                    <br />
-                    <span id="feels-like"> 18°C</span>
-                </div>
-                <div class="col-2"><strong>Humidity</strong>
-                    <br />
-                    <span id="humidity"> 60%</span></div>
-                <div class="col-2"><strong>Wind</strong>
-                    <br />
-                    <span id="wind">29 km/h</span></div>
-                <div class="col-2"><strong>Visibility</strong>
-                    <br>
-                    <span id="visibility"> 50 km</span></div>
-                <div class="col-2"><strong>Pressure</strong>
-                    <br />
-                    <span id="pressure"> 1015 hPa</span></div>
-                <div class="col-2"><strong>Sunrise</strong>
-                    <br>
-                    <span id="sunrise">6</span> </div>
-
-            </div>
+      <div class="container-extra">
+        <div id="extra-info" class="row">
+          <div class="col-2">
+            <strong>Feels like</strong>
+            <br />
+            <span id="feels-like"> 18°C</span>
+          </div>
+          <div class="col-2">
+            <strong>Humidity</strong>
+            <br />
+            <span id="humidity"> 60%</span>
+          </div>
+          <div class="col-2">
+            <strong>Wind</strong>
+            <br />
+            <span id="wind">29 km/h</span>
+          </div>
+          <div class="col-2">
+            <strong>Visibility</strong>
+            <br />
+            <span id="visibility"> 50 km</span>
+          </div>
+          <div class="col-2">
+            <strong>Pressure</strong>
+            <br />
+            <span id="pressure"> 1015 hPa</span>
+          </div>
+          <div class="col-2">
+            <strong>Sunrise</strong>
+            <br />
+            <span id="sunrise">6</span>
+          </div>
         </div>
+      </div>
 
-        <div class="containerforecast">
+      <div class="container-forecast">
+        <div id="forecast" class="row">
+          <div class="col-2">
+            <strong>Fri</strong> <br />
+            <img src="images/clouds.svg" alt="clouds" /> <br />
+            16° | <span> <em>8°</em></span>
+            <br />
+          </div>
+          <div class="col-2">
+            <strong>Sat</strong> <br />
+            <img src="images/storm.svg" alt="storm" /><br />
+            20° | <span><em>9°</em></span>
+            <br />
+          </div>
+          <div class="col-2">
+            <strong>Sun</strong> <br />
+            <img src="images/snow.svg" alt="snow" /><br />
+            23° | <span><em>10°</em></span>
+            <br />
+          </div>
+          <div class="col-2">
+            <strong>Mon</strong> <br />
+            <img src="images/wind.svg" alt="wind" /><br />
+            <li>
+              17° | <span><em>7°</em></span>
+              <br />
+            </li>
+          </div>
 
-            <div id="forecast" class="row">
-
-                <div class="col-2">
-                    <strong>Fri</strong> <br />
-                    <img src="images/clouds.svg" alt="clouds"> <br />
-                    16° | <span> <em>8°</em></span><br />
-                </div>
-                <div class="col-2">
-                    <strong>Sat</strong> <br />
-                    <img src="images/storm.svg" alt="storm"><br />
-                    20° | <span><em>9°</em></span><br />
-                </div>
-                <div class="col-2">
-                    <strong>Sun</strong> <br />
-                    <img src="images/snow.svg" alt="snow"><br />
-                    23° | <span><em>10°</em></span><br />
-                </div>
-                <div class="col-2">
-                    <strong>Mon</strong> <br />
-                    <img src="images/wind.svg" alt="wind"><br />
-                    <li>17° | <span><em>7°</em></span><br />
-                </div>
-
-                <div class="col-2">
-                    <strong>Tue</strong> <br />
-                    <img src="images/rain.svg" alt="rain"><br />
-                    18° | <span><em>9°</em></span><br />
-                </div>
-                <div class="col-2">
-                    <strong>Wed</strong> <br />
-                    <img src="images/sun.svg" alt="sun"><br />
-                    14° | <span><em>11°</em></span><br />
-                </div>
-
-            </div>
-
+          <div class="col-2">
+            <strong>Tue</strong> <br />
+            <img src="images/rain.svg" alt="rain" /><br />
+            18° | <span><em>9°</em></span>
+            <br />
+          </div>
+          <div class="col-2">
+            <strong>Wed</strong> <br />
+            <img src="images/sun.svg" alt="sun" /><br />
+            14° | <span><em>11°</em></span>
+            <br />
+          </div>
         </div>
+      </div>
 
-        <div class="footer">
-            <p> <a href ="https://github.com/NicolSaha/Weather-Application" target="_blank" style="color:whitesmoke"> Open-Source Code </a> by 👩🏻‍💻 Nicol Saha</p>
-        </div>
-
+      <div class="footer">
+        <p>
+          <a
+            href="https://github.com/NicolSaha/Weather-Application"
+            target="_blank"
+            style="color: whitesmoke;"
+          >
+            Open-Source Code
+          </a>
+          by 👩🏻‍💻 Nicol Saha
+        </p>
+      </div>
     </div>
 
     <script src="src/index.js"></script>
-
-</body>
-
+  </body>
 </html>

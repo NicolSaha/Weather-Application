@@ -8,7 +8,7 @@ let hours = now.getHours();
 let minutes = now.getMinutes();
 let year = now.getFullYear();
 
-let days = ["Sun", "Mon", "Tue", "Wen", "Thu", "Fri", "Sat"];
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let day = days[now.getDay()];
 
 let months = [
