@@ -154,16 +154,13 @@ body {
 }
 
 #weathericontoday {
-  position: relative;
+  position: block;
   margin: 0;
-  top: +110px;
-  left: -100px;
 }
 
 #weather-illustration {
-  position: relative;
-  top: +75px;
-  right: -30px;
+  display: relative;
+  top: +80px;
 }
 
 #extra-info {
