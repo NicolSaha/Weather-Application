@@ -69,6 +69,8 @@
 
 #chosencity {
   text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bolder;
 }
 
 /* Display Content General */
@@ -137,14 +139,19 @@ body {
 
 #temperature-description {
   font-weight: lighter;
-  font-style: italic;
-  font-size: medium;
+  font-size: x-large;
   text-align: right;
 }
 
-#date {
+#current-date {
   font-style: italic;
   font-size: smaller;
+}
+
+#temperature {
+  font-weight: bolder;
+  font-size: xx-large;
+  text-align: right;
 }
 
 em {
