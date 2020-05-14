@@ -16,8 +16,15 @@
 /* Search bar */
 
 .form {
-  display: inline-flex;
+  display: center;
   float: right;
+}
+
+#search-city-input {
+  border-radius: 10px;
+  border: 1px solid rgb(32, 32, 33, 0.6);
+  padding: 10px;
+  margin-top: 15px;
 }
 
 /* Search Button */
@@ -27,11 +34,11 @@
   border-color: rgb(65, 98, 127, 0.7);
   border: 2px solid;
   border-radius: 15px;
-  text-align: center;
   padding: 10px;
   margin: 20px;
   transition: all 1.3s ease-out;
   color: whitesmoke;
+  text-align: center;
 }
 
 #searchbutton:hover {
@@ -66,15 +73,13 @@ body {
   background-color: transparent;
   color: whitesmoke;
   font-family: "Muli", sans-serif;
-  width: 100%;
+  width: 600px;
 }
 
 .container-main {
   background-image: linear-gradient(to bottom, #09203f 0%, #537895 100%);
   display: block;
   margin: 50px;
-  width: 100%;
-  height: 100%;
   border-radius: 20px;
   padding: 25px;
   border: 1px solid rgb(32, 32, 33, 0.6);
@@ -117,13 +122,6 @@ body {
   border-radius: 20px;
   box-shadow: 0px 0px 10px 5px rgb(65, 98, 127, 0.1);
   padding: 20px;
-}
-
-#search-city-input {
-  border-radius: 10px;
-  border: 1px solid rgb(32, 32, 33, 0.6);
-  padding: 10px;
-  margin-top: 15px;
 }
 
 #chosencity {
@@ -204,7 +202,7 @@ body {
   color: whitesmoke;
   display: block;
   text-align: center;
-  margin: 0, auto;
+  margin: 0 auto;
   padding-top: 15px;
 }
 

@@ -40,8 +40,6 @@ function formatSunrise(timestamp) {
 }
 
 function displayWeather(response) {
-  console.log(response.data);
-
   let city = response.data.name;
   document.querySelector("#chosencity").innerHTML = city;
 
