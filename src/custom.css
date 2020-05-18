@@ -227,20 +227,6 @@ body {
 
 /* Responsiveness*/
 
-/* Media Queries: Tablet Landscape */
-@media screen and (max-width: 1060px) {
-  .body {
-    width: 67%;
-  }
-}
-
-/* Media Queries: Tabled Portrait */
-@media screen and (max-width: 768px) {
-  .body {
-    width: 100%;
-  }
-}
-
 img {
   max-width: 100%;
   height: auto;
