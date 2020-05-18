@@ -229,14 +229,14 @@ body {
 
 /* Media Queries: Tablet Landscape */
 @media screen and (max-width: 1060px) {
-  .container-main {
+  .body {
     width: 67%;
   }
 }
 
 /* Media Queries: Tabled Portrait */
 @media screen and (max-width: 768px) {
-  .container-main {
+  .body {
     width: 100%;
   }
 }
