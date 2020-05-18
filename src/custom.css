@@ -73,7 +73,7 @@ body {
   background-color: transparent;
   color: whitesmoke;
   font-family: "Muli", sans-serif;
-  width: 600px;
+  width: 640px;
 }
 
 .container-main {
@@ -106,8 +106,7 @@ body {
 .container-forecast {
   display: block;
   text-align: center;
-  margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 15px;
   background-color: rgb(15, 40, 70, 0.4);
   padding: 20px;
   border-radius: 20px;
@@ -122,6 +121,10 @@ body {
   border-radius: 20px;
   box-shadow: 0px 0px 10px 5px rgb(65, 98, 127, 0.1);
   padding: 20px;
+  background-image: url(/Users/nicolsaha/Desktop/Weather-Application/images/milky-way.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 
 #chosencity {
