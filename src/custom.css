@@ -122,7 +122,7 @@ body {
   box-shadow: 0px 0px 10px 5px rgb(65, 98, 127, 0.1);
   padding: 20px;
   background-image: url(/Users/nicolsaha/Desktop/Weather-Application/images/milky-way.svg);
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: 100%;
 }
 
